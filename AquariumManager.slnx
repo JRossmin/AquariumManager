@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AquariumManager.Api/AquariumManager.Api.csproj" />
+    <Project Path="src/AquariumManager.Application/AquariumManager.Application.csproj" />
+    <Project Path="src/AquariumManager.Domain/AquariumManager.Domain.csproj" />
+    <Project Path="src/AquariumManager.Infrastructure/AquariumManager.Infrastructure.csproj" />
+  </Folder>
+</Solution>

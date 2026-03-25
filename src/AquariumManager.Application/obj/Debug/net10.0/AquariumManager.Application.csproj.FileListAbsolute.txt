@@ -1,0 +1,15 @@
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Application\bin\Debug\net10.0\AquariumManager.Application.deps.json
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Application\bin\Debug\net10.0\AquariumManager.Application.dll
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Application\bin\Debug\net10.0\AquariumManager.Application.pdb
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Application\bin\Debug\net10.0\AquariumManager.Domain.dll
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Application\bin\Debug\net10.0\AquariumManager.Domain.pdb
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Application\obj\Debug\net10.0\AquariumManager.Application.csproj.AssemblyReference.cache
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Application\obj\Debug\net10.0\AquariumManager.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Application\obj\Debug\net10.0\AquariumManager.Application.AssemblyInfoInputs.cache
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Application\obj\Debug\net10.0\AquariumManager.Application.AssemblyInfo.cs
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Application\obj\Debug\net10.0\AquariumManager.Application.csproj.CoreCompileInputs.cache
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Application\obj\Debug\net10.0\Aquarium.B9DFE194.Up2Date
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Application\obj\Debug\net10.0\AquariumManager.Application.dll
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Application\obj\Debug\net10.0\refint\AquariumManager.Application.dll
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Application\obj\Debug\net10.0\AquariumManager.Application.pdb
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Application\obj\Debug\net10.0\ref\AquariumManager.Application.dll

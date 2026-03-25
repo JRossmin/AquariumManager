@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "AquariumManager.Application/1.0.0": {
+        "dependencies": {
+          "AquariumManager.Domain": "1.0.0"
+        },
+        "runtime": {
+          "AquariumManager.Application.dll": {}
+        }
+      },
+      "AquariumManager.Domain/1.0.0": {
+        "runtime": {
+          "AquariumManager.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AquariumManager.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AquariumManager.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

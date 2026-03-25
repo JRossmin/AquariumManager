@@ -1,0 +1,17 @@
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\bin\Debug\net10.0\AquariumManager.Infrastructure.deps.json
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\bin\Debug\net10.0\AquariumManager.Infrastructure.runtimeconfig.json
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\bin\Debug\net10.0\AquariumManager.Infrastructure.dll
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\bin\Debug\net10.0\AquariumManager.Infrastructure.pdb
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\bin\Debug\net10.0\AquariumManager.Domain.dll
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\bin\Debug\net10.0\AquariumManager.Domain.pdb
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\obj\Debug\net10.0\AquariumManager.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\obj\Debug\net10.0\AquariumManager.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\obj\Debug\net10.0\AquariumManager.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\obj\Debug\net10.0\AquariumManager.Infrastructure.AssemblyInfo.cs
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\obj\Debug\net10.0\AquariumManager.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\obj\Debug\net10.0\Aquarium.ECDCCB9D.Up2Date
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\obj\Debug\net10.0\AquariumManager.Infrastructure.dll
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\obj\Debug\net10.0\refint\AquariumManager.Infrastructure.dll
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\obj\Debug\net10.0\AquariumManager.Infrastructure.pdb
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\obj\Debug\net10.0\AquariumManager.Infrastructure.genruntimeconfig.cache
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\obj\Debug\net10.0\ref\AquariumManager.Infrastructure.dll
