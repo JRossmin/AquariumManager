@@ -16,6 +16,8 @@ public class Species
     public string Category { get; private set; } = string.Empty;
     public string? Notes { get; private set; }
 
+    public string ImageUrl { get;  set; } = string.Empty;
+
     public ICollection<InventoryItem> InventoryItems { get; private set; } = new List<InventoryItem>();
     public ICollection<InventoryLot> InventoryLots { get; private set; } = new List<InventoryLot>();
 
@@ -32,7 +34,8 @@ public class Species
         decimal? maxTemperature,
         string? compatibilityNotes,
         string category,
-        string? notes = null)
+        string? notes = null,
+        string imageUrl = "")
     {
         CommonName = commonName;
         ScientificName = scientificName;
@@ -45,6 +48,7 @@ public class Species
         CompatibilityNotes = compatibilityNotes;
         Category = category;
         Notes = notes;
+        ImageUrl = imageUrl;
     }
 
     public void UpdateInfo(
@@ -58,7 +62,8 @@ public class Species
         decimal? maxTemperature,
         string? compatibilityNotes,
         string category,
-        string? notes)
+        string? notes,
+        string? imageUrl = null)
     {
         CommonName = commonName;
         ScientificName = scientificName;
@@ -71,5 +76,6 @@ public class Species
         CompatibilityNotes = compatibilityNotes;
         Category = category;
         Notes = notes;
+        ImageUrl = imageUrl ?? string.Empty;
     }
 }

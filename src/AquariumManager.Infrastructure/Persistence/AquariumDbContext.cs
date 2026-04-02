@@ -29,6 +29,17 @@ public class AquariumDbContext : DbContext
             builder.Property(s => s.Type).HasMaxLength(100);
             builder.Property(s => s.Variety).HasMaxLength(100);
             builder.Property(s => s.Category).HasMaxLength(100);
+              builder.Property(s => s.MinPH)
+              .HasPrecision(3, 2);
+
+        builder.Property(s => s.MaxPH)
+              .HasPrecision(3, 2);
+
+        builder.Property(s => s.MinTemperature)
+              .HasPrecision(4, 1); // ej. 0.0 a 99.9
+
+        builder.Property(s => s.MaxTemperature)
+              .HasPrecision(4, 1);
         });
 
         modelBuilder.Entity<InventoryItem>(builder =>

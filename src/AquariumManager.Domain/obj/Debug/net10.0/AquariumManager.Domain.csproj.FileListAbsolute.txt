@@ -9,3 +9,4 @@ C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager
 C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Domain\obj\Debug\net10.0\refint\AquariumManager.Domain.dll
 C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Domain\obj\Debug\net10.0\AquariumManager.Domain.pdb
 C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Domain\obj\Debug\net10.0\ref\AquariumManager.Domain.dll
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Domain\obj\Debug\net10.0\AquariumManager.Domain.sourcelink.json

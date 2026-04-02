@@ -49,4 +49,22 @@ public class SpeciesController : ControllerBase
         var created = await _speciesService.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
     }
+
+    // PUT: api/Species/5
+    [HttpPut("{id:int}")]
+    public async Task<IActionResult> Update(int id, UpdateSpeciesDto dto)
+    {
+         var result = await _speciesService.UpdateAsync(id, dto);
+
+    if (!result.Success)
+    {
+        // Diferenciar si es validación o recurso no encontrado
+        if (result.ErrorMessage == "La especie especificada no existe.")
+            return NotFound(result.ErrorMessage);
+
+        return BadRequest(result.ErrorMessage);
+    }
+
+    return NoContent();
+    }
 }

@@ -10,4 +10,5 @@ public interface IInventoryLotService
     Task RegisterMortalityAsync(RegisterMortalityDto dto);
 
     Task<BiologicalStockDto?> GetBiologicalStockDtoBySpeciesAsync(int speciesId);
+    
 }

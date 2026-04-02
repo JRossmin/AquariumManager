@@ -70,17 +70,25 @@ namespace AquariumManager.Infrastructure.Migrations
                     b.Property<string>("CompatibilityNotes")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<decimal?>("MaxPH")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(3, 2)
+                        .HasColumnType("decimal(3,2)");
 
                     b.Property<decimal?>("MaxTemperature")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(4, 1)
+                        .HasColumnType("decimal(4,1)");
 
                     b.Property<decimal?>("MinPH")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(3, 2)
+                        .HasColumnType("decimal(3,2)");
 
                     b.Property<decimal?>("MinTemperature")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(4, 1)
+                        .HasColumnType("decimal(4,1)");
 
                     b.Property<string>("Notes")
                         .HasColumnType("nvarchar(max)");
@@ -132,6 +140,9 @@ namespace AquariumManager.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<int?>("SupplierId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TotalMortality")
                         .HasColumnType("int");
 
                     b.Property<decimal>("UnitCost")

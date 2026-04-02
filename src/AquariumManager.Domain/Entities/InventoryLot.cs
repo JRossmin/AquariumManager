@@ -14,7 +14,8 @@ public class InventoryLot
     public Supplier? Supplier { get; private set; }
     public string? BatchNumber { get; private set; }
     public string? Notes { get; private set; }
-
+    
+    public int TotalMortality { get; set;} //bajas despues de la llegada.
     public ICollection<MortalityRecord> MortalityRecords { get; private set; } = new List<MortalityRecord>();
 
     private InventoryLot() { }

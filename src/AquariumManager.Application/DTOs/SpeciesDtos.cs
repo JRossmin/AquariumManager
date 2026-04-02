@@ -13,6 +13,7 @@ public class CreateSpeciesDto
     public string? CompatibilityNotes { get; set; }
     public string Category { get; set; } = string.Empty;
     public string? Notes { get; set; }
+    public string ImageUrl { get; set; } = string.Empty;
 }
 
 public class UpdateSpeciesDto
@@ -28,6 +29,7 @@ public class UpdateSpeciesDto
     public string? CompatibilityNotes { get; set; }
     public string Category { get; set; } = string.Empty;
     public string? Notes { get; set; }
+    public string ImageUrl { get; set; } = string.Empty;
 }
 
 public class SpeciesDto
@@ -44,4 +46,5 @@ public class SpeciesDto
     public string? CompatibilityNotes { get; set; }
     public string Category { get; set; } = string.Empty;
     public string? Notes { get; set; }
+    public string ImageUrl { get;  set; } = string.Empty;
 }

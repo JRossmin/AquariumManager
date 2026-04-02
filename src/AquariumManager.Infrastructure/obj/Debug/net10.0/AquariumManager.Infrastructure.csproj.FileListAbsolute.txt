@@ -15,3 +15,4 @@ C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager
 C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\obj\Debug\net10.0\AquariumManager.Infrastructure.pdb
 C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\obj\Debug\net10.0\AquariumManager.Infrastructure.genruntimeconfig.cache
 C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\obj\Debug\net10.0\ref\AquariumManager.Infrastructure.dll
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Infrastructure\obj\Debug\net10.0\AquariumManager.Infrastructure.sourcelink.json

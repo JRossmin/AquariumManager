@@ -59,4 +59,16 @@ public class InventoryLotsController : ControllerBase
         await _inventoryLotService.RegisterMortalityAsync(dto);
         return NoContent();
     }
+
+    // GET: api/InventoryLots/biological-stock/3
+[HttpGet("biological-stock/{speciesId:int}")]
+public async Task<ActionResult<BiologicalStockDto>> GetBiologicalStock(int speciesId)
+{
+    var stock = await _inventoryLotService.GetBiologicalStockDtoBySpeciesAsync(speciesId);
+    if (stock is null)
+        return NotFound();
+
+    return Ok(stock);
+}
+
 }

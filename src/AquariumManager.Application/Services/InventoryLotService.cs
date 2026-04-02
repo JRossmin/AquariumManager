@@ -87,7 +87,7 @@ public class InventoryLotService : IInventoryLotService
         var lots = await _lotRepository.GetBySpeciesAsync(speciesId);
         
        var currentStock = lots.Sum(l =>
-        (l.InitialQuantity - l.DeadOnArrival /* - l.MortalityAfterArrival si luego lo agregas */));
+        l.InitialQuantity - l.DeadOnArrival - l.MortalityRecords?.Sum(m => m.Quantity) ?? 0);
 
        return new BiologicalStockDto
     {

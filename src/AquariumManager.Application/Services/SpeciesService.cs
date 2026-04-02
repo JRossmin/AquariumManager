@@ -1,3 +1,4 @@
+using AquariumManager.Application.Common;
 using AquariumManager.Application.DTOs;
 using AquariumManager.Domain.Entities;
 using AquariumManager.Domain.Interfaces;
@@ -26,7 +27,8 @@ public class SpeciesService : ISpeciesService
             dto.MaxTemperature,
             dto.CompatibilityNotes,
             dto.Category,
-            dto.Notes
+            dto.Notes,
+            dto.ImageUrl
         );
 
         await _speciesRepository.AddAsync(species);
@@ -46,10 +48,16 @@ public class SpeciesService : ISpeciesService
         return list.Select(MapToDto).ToList();
     }
 
-    public async Task UpdateAsync(int id, UpdateSpeciesDto dto)
+    public async  Task<OperationResult> UpdateAsync(int id, UpdateSpeciesDto dto)
     {
+         if (dto.MinPH > dto.MaxPH)
+        return OperationResult.Fail("MinPH no puede ser mayor que MaxPH.");
+
+    if (dto.MinTemperature > dto.MaxTemperature)
+        return OperationResult.Fail("MinTemperature no puede ser mayor que MaxTemperature.");
+
         var species = await _speciesRepository.GetByIdAsync(id)
-                      ?? throw new InvalidOperationException("Species not found.");
+                      ?? throw new InvalidOperationException("La especie especificada no existe.");
 
         species.UpdateInfo(
             dto.CommonName,
@@ -62,10 +70,12 @@ public class SpeciesService : ISpeciesService
             dto.MaxTemperature,
             dto.CompatibilityNotes,
             dto.Category,
-            dto.Notes
+            dto.Notes, 
+            dto.ImageUrl
         );
 
         await _speciesRepository.UpdateAsync(species);
+        return OperationResult.Ok();
     }
 
     public async Task DeleteAsync(int id)
@@ -86,6 +96,7 @@ public class SpeciesService : ISpeciesService
         MaxTemperature = s.MaxTemperature,
         CompatibilityNotes = s.CompatibilityNotes,
         Category = s.Category,
-        Notes = s.Notes
+        Notes = s.Notes,
+        ImageUrl = s.ImageUrl
     };
 }

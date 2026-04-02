@@ -23,6 +23,7 @@ builder.Services.AddScoped<ISupplierRepository, SupplierRepository>();
 builder.Services.AddScoped<ISpeciesService, SpeciesService>();
 builder.Services.AddScoped<IInventoryLotService, InventoryLotService>();
 builder.Services.AddScoped<ISupplierService, SupplierService>();
+builder.Services.AddScoped<ICatalogService, CatalogService>();
 
 // Controllers
 builder.Services
