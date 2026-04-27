@@ -49,6 +49,26 @@ namespace AquariumManager.Infrastructure.Migrations
                     b.ToTable("InventoryItems", (string)null);
                 });
 
+            modelBuilder.Entity("AquariumManager.Domain.Entities.Sale", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CustomerName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Sales");
+                });
+
             modelBuilder.Entity("AquariumManager.Domain.Entities.Species", b =>
                 {
                     b.Property<int>("Id")
@@ -187,6 +207,35 @@ namespace AquariumManager.Infrastructure.Migrations
                     b.ToTable("MortalityRecords", (string)null);
                 });
 
+            modelBuilder.Entity("SaleItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SaleId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SpeciesId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SaleId");
+
+                    b.HasIndex("SpeciesId");
+
+                    b.ToTable("SaleItems");
+                });
+
             modelBuilder.Entity("Supplier", b =>
                 {
                     b.Property<int>("Id")
@@ -257,6 +306,30 @@ namespace AquariumManager.Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("InventoryLot");
+                });
+
+            modelBuilder.Entity("SaleItem", b =>
+                {
+                    b.HasOne("AquariumManager.Domain.Entities.Sale", "Sale")
+                        .WithMany("Items")
+                        .HasForeignKey("SaleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AquariumManager.Domain.Entities.Species", "Species")
+                        .WithMany()
+                        .HasForeignKey("SpeciesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Sale");
+
+                    b.Navigation("Species");
+                });
+
+            modelBuilder.Entity("AquariumManager.Domain.Entities.Sale", b =>
+                {
+                    b.Navigation("Items");
                 });
 
             modelBuilder.Entity("AquariumManager.Domain.Entities.Species", b =>

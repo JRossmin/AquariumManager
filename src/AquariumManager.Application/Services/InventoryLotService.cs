@@ -23,15 +23,24 @@ public class InventoryLotService : IInventoryLotService
     public async Task<InventoryLotDto> CreateLotAsync(CreateInventoryLotDto dto)
     {
         var species = await _speciesRepository.GetByIdAsync(dto.SpeciesId)
-                      ?? throw new InvalidOperationException("Species not found.");
+                      ?? throw new InvalidOperationException($"La especie {dto.SpeciesId} no fue encontrada.");
 
         Supplier? supplier = null;
         if (dto.SupplierId.HasValue)
         {
             supplier = await _supplierRepository.GetByIdAsync(dto.SupplierId.Value)
-                       ?? throw new InvalidOperationException("Supplier not found.");
+                       ?? throw new InvalidOperationException($"Proveedor {dto.SupplierId.Value} no fue encontrado.");
         }
-
+         if(dto.InitialQuantity <= 0)
+             throw new InvalidOperationException("Cantidad inicial debe ser mayor a cero.");
+        if(dto.DeadOnArrival < 0)
+             throw new InvalidOperationException("Decesos al llegar no debe ser negativa.");
+        if(dto.DeadOnArrival > dto.InitialQuantity)
+             throw new InvalidOperationException("Decesos al llegar no puede exceder la cantidad inicial.");
+        
+        if(dto.UnitCost <= 0)
+            throw new InvalidOperationException("Costo unitario debe ser mayor a cero."); 
+        
         var lot = new InventoryLot(
             speciesId: dto.SpeciesId,
             arrivalDate: dto.ArrivalDate,
@@ -57,6 +66,11 @@ public class InventoryLotService : IInventoryLotService
         var supplier = lot.Supplier;
 
         return MapToDto(lot, species, supplier);
+    }
+
+    public async Task<InventoryLot?> GetLotEntityByIdAsync(int id)
+    {
+        return await _lotRepository.GetByIdAsync(id);
     }
 
     public async Task<IReadOnlyList<InventoryLotDto>> GetBySpeciesAsync(int speciesId)
@@ -87,7 +101,7 @@ public class InventoryLotService : IInventoryLotService
         var lots = await _lotRepository.GetBySpeciesAsync(speciesId);
         
        var currentStock = lots.Sum(l =>
-        l.InitialQuantity - l.DeadOnArrival - l.MortalityRecords?.Sum(m => m.Quantity) ?? 0);
+        l.InitialQuantity - l.DeadOnArrival - (l.MortalityRecords?.Sum(m => m.Quantity) ?? 0));
 
        return new BiologicalStockDto
     {
@@ -117,4 +131,9 @@ public class InventoryLotService : IInventoryLotService
         };
     }
 
+    public async Task<IReadOnlyList<InventoryLotDto>> GetAllAsync()
+    {
+        var lots = await _lotRepository.GetAllAsync();
+        return lots.Select(lot => MapToDto(lot, lot.Species, lot.Supplier)).ToList();
+    }
 }

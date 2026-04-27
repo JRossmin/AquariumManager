@@ -1,0 +1,30 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // Modelo principal (ajusta al ID real que veas en /models)
+  "model": "zen/big-pickle",
+
+  // Herramientas básicas para trabajar con el repo
+  "tools": {
+    "read": true,
+    "write": true,
+    "edit": true,
+    "glob": true,
+    "grep": true
+  },
+
+  "permission": {
+     "read": "allow",
+    "edit": "ask",
+    "write": "ask",
+    "glob": "allow",
+    "grep": "allow",
+    "external_directory": "ask",
+    "skill": "allow"
+  },
+
+  // Opcional: cargar siempre el project_Context.md como instrucción
+  "instructions": [
+    "{file:C:/Users/x/OneDrive/Documentos/Proyectos/NET/AquariumManager/PROJECT_CONTEXT.md}"
+  ]
+}

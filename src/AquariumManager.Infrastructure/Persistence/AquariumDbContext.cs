@@ -16,6 +16,8 @@ public class AquariumDbContext : DbContext
     public DbSet<MortalityRecord> MortalityRecords => Set<MortalityRecord>();
     public DbSet<Supplier> Suppliers => Set<Supplier>();
 
+public DbSet<Sale> Sales { get; set; } = null!;
+public DbSet<SaleItem> SaleItems { get; set; } = null!;
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

@@ -39,15 +39,7 @@ public class InventoryLotsController : ControllerBase
     public async Task<ActionResult<InventoryLotDto>> Create(CreateInventoryLotDto dto)
     {
         
-        if(dto.InitialQuantity <= 0)
-            return BadRequest("Cantidad inicial debe ser mayor a cero.");
-        if(dto.DeadOnArrival < 0)
-            return BadRequest("Decesos al llegar no debe ser negativa.");
-        if(dto.DeadOnArrival > dto.InitialQuantity)
-            return BadRequest("Decesos al llegar no puede exceder la cantidad inicial.");
-        
-        if(dto.UnitCost <= 0)
-            return BadRequest("Costo unitario debe ser mayor a cero."); 
+       
         var created = await _inventoryLotService.CreateLotAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
     }
@@ -70,5 +62,13 @@ public async Task<ActionResult<BiologicalStockDto>> GetBiologicalStock(int speci
 
     return Ok(stock);
 }
+
+   [HttpGet]
+    public async Task<ActionResult<IEnumerable<InventoryLotDto>>> GetAll()
+    {
+        var lots = await _inventoryLotService.GetAllAsync();
+        return Ok(lots);
+    }
+
 
 }

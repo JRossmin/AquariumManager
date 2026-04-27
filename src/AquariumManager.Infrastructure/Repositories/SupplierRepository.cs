@@ -39,4 +39,14 @@ public class SupplierRepository : ISupplierRepository
         _context.Suppliers.Update(supplier);
         await _context.SaveChangesAsync();
     }
+
+    public async Task DeleteAsync(int id)
+    {
+        var supplier = await _context.Suppliers.FindAsync(id);
+        if (supplier != null)
+        {
+            _context.Suppliers.Remove(supplier);
+            await _context.SaveChangesAsync();
+        }
+    }
 }

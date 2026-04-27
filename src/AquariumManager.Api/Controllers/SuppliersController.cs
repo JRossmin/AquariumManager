@@ -36,4 +36,20 @@ public class SuppliersController : ControllerBase
         var created = await _supplierService.CreateAsync(dto);
         return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
     }
+
+    [HttpPut("{id:int}")]
+    public async Task<IActionResult> Update(int id, CreateSupplierDto dto)
+    {
+        var result = await _supplierService.UpdateAsync(id, dto);
+        if (!result.Success) return NotFound(result.ErrorMessage);
+        return NoContent();
+    }
+
+    [HttpDelete("{id:int}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var result = await _supplierService.DeleteAsync(id);
+        if (!result.Success) return NotFound(result.ErrorMessage);
+        return NoContent();
+    }
 }

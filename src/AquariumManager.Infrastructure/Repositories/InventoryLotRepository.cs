@@ -62,4 +62,15 @@ public class InventoryLotRepository : IInventoryLotRepository
         _context.InventoryLots.Update(lot);
         await _context.SaveChangesAsync();
     }
+
+    public async Task<IReadOnlyList<InventoryLot>> GetAllAsync()
+    {
+     return await _context.InventoryLots
+        .Include(l => l.Species)
+        .Include(l => l.Supplier)
+        .Include(l => l.MortalityRecords)
+        .OrderByDescending(l => l.ArrivalDate)
+        .ToListAsync();
+
+}
 }

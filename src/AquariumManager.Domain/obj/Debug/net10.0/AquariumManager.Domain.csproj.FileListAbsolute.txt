@@ -5,8 +5,8 @@ C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager
 C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Domain\obj\Debug\net10.0\AquariumManager.Domain.AssemblyInfoInputs.cache
 C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Domain\obj\Debug\net10.0\AquariumManager.Domain.AssemblyInfo.cs
 C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Domain\obj\Debug\net10.0\AquariumManager.Domain.csproj.CoreCompileInputs.cache
+C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Domain\obj\Debug\net10.0\AquariumManager.Domain.sourcelink.json
 C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Domain\obj\Debug\net10.0\AquariumManager.Domain.dll
 C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Domain\obj\Debug\net10.0\refint\AquariumManager.Domain.dll
 C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Domain\obj\Debug\net10.0\AquariumManager.Domain.pdb
 C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Domain\obj\Debug\net10.0\ref\AquariumManager.Domain.dll
-C:\Users\x\OneDrive\Documentos\Proyectos\NET\AquariumManager\src\AquariumManager.Domain\obj\Debug\net10.0\AquariumManager.Domain.sourcelink.json

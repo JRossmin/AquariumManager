@@ -8,4 +8,5 @@ public interface ISupplierRepository
     Task<IReadOnlyList<Supplier>> GetAllAsync();
     Task AddAsync(Supplier supplier);
     Task UpdateAsync(Supplier supplier);
+    Task DeleteAsync(int id);
 }

@@ -1,7 +1,9 @@
 
+using AquariumManager.Application.Common;
 using AquariumManager.Application.DTOs;
-using AquariumManager.Application.Services;
 using AquariumManager.Domain.Interfaces;
+
+namespace AquariumManager.Application.Services;
 
 public class SupplierService : ISupplierService
 {
@@ -59,5 +61,26 @@ public class SupplierService : ISupplierService
             Email = supplier.Email,
             Notes = supplier.Notes
         };
+    }
+
+    public async Task<OperationResult> UpdateAsync(int id, CreateSupplierDto dto)
+    {
+        var supplier = await _supplierRepository.GetByIdAsync(id);
+        if (supplier is null) return OperationResult.Fail($"Proveedor con Id {id} no encontrado.");
+
+        supplier.UpdateContact(dto.Name, dto.Phone, dto.Email, dto.ContactInfo, dto.Notes);
+        await _supplierRepository.UpdateAsync(supplier);
+
+        return OperationResult.Ok();
+    }
+
+    public async Task<OperationResult> DeleteAsync(int id)
+    {
+        var supplier = await _supplierRepository.GetByIdAsync(id);
+        if (supplier is null) return OperationResult.Fail($"Proveedor con Id {id} no encontrado.");
+
+        await _supplierRepository.DeleteAsync(id);
+
+        return OperationResult.Ok();
     }
 }
